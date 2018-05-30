@@ -1,8 +1,13 @@
 import re
 import os
-
+#Usage
+#   it = fi.FileIterator(SRC_PATH, True, '.*png')
+#       for (shortname, fullname) in it.list():
+#           print (shortname, fullname)
+#
+#
 class FileIterator:
-    def __init__(self, inputFiles, recurseSubDirectories, pattern, listDirectories=False):
+    def __init__(self, inputFiles, recurseSubDirectories=True, pattern='.*', listDirectories=False):
         self.inputFiles = inputFiles
         self.recurseSubDirectories = recurseSubDirectories
         self.listDirectories = listDirectories
